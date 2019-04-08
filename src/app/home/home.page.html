@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item lines="full">
+    <ion-label padding-horizontal>Fecha String Input</ion-label>
+    <ion-input [(ngModel)]="inputDateStr" (ionChange)="onInputChange($event)">
+    </ion-input>
+  </ion-item>
+  <ion-item [detail]="true" lines="full" button>
+    <ion-label padding-horizontal>Fecha</ion-label>
+    <ion-datetime
+      clearInput
+      display-format="DD/MM/YYYY"
+      picker-format="DD MMMM YYYY"
+      [(ngModel)]="inputDate"
+      (ionChange)="onDatetimeChange($event)"
+    ></ion-datetime>
+  </ion-item>
+  <ion-item lines="full">
+    <ion-label padding-horizontal>Fecha String Output</ion-label>
+    <ion-input [(ngModel)]="outputDateStr"> </ion-input>
+  </ion-item>
+</ion-content>
